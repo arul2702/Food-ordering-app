@@ -26,6 +26,5 @@ app.use("/images",express.static("uploads"))
 
 app.listen(port,()=>{
     console.log(`Server Started on http://localhost:${port}`);
-    
 })
 

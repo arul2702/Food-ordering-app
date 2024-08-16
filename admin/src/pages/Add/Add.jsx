@@ -4,9 +4,8 @@ import { assets } from "../../assets/assets";
 import axios from "axios"
 import { toast } from "react-toastify";
 
-const Add = () => {
+const Add = ({url}) => {
 
-const url = "http://localhost:4000"
 const [image,setImage] = useState(false);
 const [data,setData] = useState({
   name:"",
@@ -25,14 +24,17 @@ const onChangeHandler = (event) =>{
 // },[data])
 
 const onSubmitHandler = async(event)=>{
+  //we are using post to contact in backend, cause it is asynchronus
   event.preventDefault();
-  // FormData builtin object for keyvalue pairs
+  // FormData - builtin object for keyvalue pairs
   const formData = new FormData();
   formData.append("name",data.name);
   formData.append("description",data.description);
   formData.append("price",Number(data.price));
   formData.append("category",data.category);
   formData.append("image",image);
+  // console.log(formData.get("name"));
+  // api
   const response = await axios.post(`${url}/api/food/add`,formData);
   if(response.data.success){
     setData({
