@@ -71,4 +71,13 @@ const registerUser = async(req,res)=>{
     }
 }
 
-export {loginUser,registerUser}
+const displayUser =async(req,res)=>{
+    try {
+        const user = await userModel.findById(req.body.userId);
+        return res.json({success:true,user})
+    } catch (error) {
+        console.log(error);
+        return res.json({success:false,message:"error"})
+    }
+}
+export {loginUser,registerUser,displayUser}

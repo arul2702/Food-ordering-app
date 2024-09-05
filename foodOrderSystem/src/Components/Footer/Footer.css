@@ -40,7 +40,9 @@
     margin-right: 10px;
     cursor: pointer;
 }
-
+.footer-content-left img{
+    width: 200px;
+}
 .footer .copyright{
     text-align: center;
 }

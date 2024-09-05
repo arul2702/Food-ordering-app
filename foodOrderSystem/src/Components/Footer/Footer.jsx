@@ -34,12 +34,12 @@ const Footer = () => {
                         <h2>STAY CONNECTED</h2>
                         <ul>
                             <li>+91 9348973829</li>
-                            <li>tomato@gmail.com</li>
+                            <li>foodie@gmail.com</li>
                         </ul>
                     </div>
                 </div>
                 <hr />
-                <p className="copyright">Copyright @ tomato. co limited</p>
+                <p className="copyright">Copyright @ foodie. co limited</p>
             </div>
         </>
     );

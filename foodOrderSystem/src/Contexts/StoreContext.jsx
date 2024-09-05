@@ -8,6 +8,9 @@ const StoreContextProvider = (props) => {
     const [token,setToken] = useState("");
     const [food_list,setFoodList]=useState([]);
 
+    const fetchUserName = async()=>{
+        const response = await axios.get()
+    }
 
     // console.log(token);
     const addToCart = async (itemId) =>{

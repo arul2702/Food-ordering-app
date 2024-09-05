@@ -11,7 +11,7 @@ const [data,setData] = useState({
   name:"",
   description:"",
   price:"",
-  category:"salad" //default value
+  category:"Salad" //default value
 })
 
 const onChangeHandler = (event) =>{
@@ -32,16 +32,20 @@ const onSubmitHandler = async(event)=>{
   formData.append("description",data.description);
   formData.append("price",Number(data.price));
   formData.append("category",data.category);
+  // console.log(data.category);
+  
   formData.append("image",image);
   // console.log(formData.get("name"));
   // api
   const response = await axios.post(`${url}/api/food/add`,formData);
   if(response.data.success){
+    console.log(response.data.data.category);
+    
     setData({
       name:"",
       description:"",
       price:"",
-      category:"salad" //back to default values after submission
+      category:response.data.data.category //back to default values after submission
     })
     setImage(false)
     toast.success(response.data.message);

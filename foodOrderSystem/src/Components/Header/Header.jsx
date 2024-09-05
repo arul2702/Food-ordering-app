@@ -8,7 +8,7 @@ const Header = () => {
             <h2>Order your fravourite food</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sapiente vero quo, ratione provident est. 
                 Quasi et, delectus consectetur, culpa repellat neque, porro fugiat ipsum iusto ipsam quibusdam molestiae sit.</p>
-            <button>View Menu</button>
+            <a href='#explore-menu'>View Menu </a>
         </div>
     </div>
   )
